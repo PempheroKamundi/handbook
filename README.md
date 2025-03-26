@@ -1,7 +1,7 @@
 # Introduction
 
-Welcome onboard!
-This document will help you prepare your development environment step-by-step.
+Welcome aboard!
+This document will help you prepare to work with us step-by-step.
 
 # Foundation rules of the company
 
@@ -197,7 +197,7 @@ RT generally means "investment", RTO generally means "operations".
 | ---------------------------------------- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | RT / content marketing                   | Write articles or blog posts under the company name and present the company to the outside world.                                                                                                                                                       |
 | RT / django cookiecutter template        | Develop our internal Django template.                                                                                                                                                                                                                   |
-| RTO / internal infrastructure management | Manage workspace setup, including creating encrypted partitions, installing virtual machines, and installing software **not tied to specific projects**. If it's related to any internal or external project then please bill the time on that project. |
+| RT / internal infrastructure management | Manage workspace setup, including creating encrypted partitions, installing virtual machines, and installing software **not tied to specific projects**. If it's related to any internal or external project then please bill the time on that project. |
 | RT / non-project meeting                 | Participate in phone calls and Slack conversations related to work but not directly project-related. These are very rare, almost non-existent.                                                                                                          |
 | RTO / virtual assistant                  | Organize and procure equipment and supplies needed in the company, including laptops and office supplies, or perform other virtual assistant tasks.                                                                                                     |
 | RT / other internal development          | Improve internal infrastructure, such as onboarding, training, or other company-related activities that might benefit others.                                                                                                                           |
@@ -599,7 +599,7 @@ They may seem obvious, and RT developers tend to follow them subconsciously, but
 
 Whenever you're taking some days off, it's important to let other team members know, so that work can be planned and client expectations managed.
 
-- You should mark days when you won't be working in GSheet ['Work planning'](https://docs.google.com/spreadsheets/d/12nQKdskWDwFHhQ01BMjfllabqJTZo4tMdCsWx6NJaL4/edit?usp=sharing) as soon as you know about it.
+- You should mark days when you won't be working in the ['Staff Availability project'](https://reeftechnologies.atlassian.net/jira/core/projects/SA) in our Jira as soon as you know about it.
 - Announce it on Slack in `#annoucements` channel beforehand.
 - If you need time off urgently because of something unexpected, please let the affected (people you had planned meetings with / or that need to pick up the task from you) know through Slack right away.
   Use `#annoucements` if you are really in a hurry.
