@@ -119,6 +119,16 @@ Q: Will the client pay for the time spent on configuring 2FA?
 \
 A: Happily.
 
+Q: Do I still need to set up service-specific 2FA if I use Google SSO?
+\
+A: No. Google SSO (with 2FA enabled on your Google account) already covers this, as long as password-based login is disabled.
+
+### External LLMs
+
+Most clients explictly agreed to the use of non-local LLMs. Ask a lead developer on the given project what tools you can use for which type of work - there are a couple of modules which should never be shown as context for an external LLM.
+
+We pay for the AI tools used by our staff members. See [AI tool funding agreement](agreements.md#ai-tool-use--funding) for more details.
+
 ## What does "high performance" mean?
 
 Our clients really don't care how fast we type on our keyboards (in fact while on meetings we often don't touch the keyboard for a long time, getting a clean zero keystrokes per hour, delivering not only a very high amount of value per hour, but also infinite value per keystroke!
@@ -134,15 +144,22 @@ We employ several techniques to output a lot of value in a unit of time:
 4. Design systems in such a way that they are easy to think about and implement.
 5. Design systems in such a way that they are durable and, whenever possible, self-healing.
 6. We prefer candidates who are not an order of magnitude slower than others.
-   For example, a program that reverts a small file can take a minute to implement, but some of our candidates need more than 10 minutes.
+   For example, a program that reverts a small file can take less than a minute to implement, but some candidates need more than 10 minutes.
    Someone might have a problem with this, but we just don't hire the slowest developers on the market.
 7. If there is doubt on whether something should be done or not, we stop and ask.
    This theoretically increases Time To Market, but in practice, it only does so for the last task of the iteration (so a hint for planning is that the last task in the iteration should be low-risk).
 8. We are allergic to waste.
    This drives many of our actions, including good communication with the client who knows what must be done.
    While some software houses lose \~30% of their performance (due to miscommunications, etc.), we stay way below 1% (the exact number is hard to measure when the amount of waste is so low).
-9. Use modern IDEs.
-10. Use LLMs (ChatGPT, GitHub Copilot, etc.).
+   As mentioned above, we tend to pause work on a ticket when we are not sure, choosing a small delay on a particular task over potentially having to discard work due to a bad assumption. Our clients prefer it this way.
+10. Use modern IDEs. Pycharm, Cursor, Windsurf or VisualStudio with a LLM plugin. Some people are trying to use VIM with plugins for LLMs, but nowadays it's mostly Cursor/Windsurf/Pycharm.
+11. Use LLMs (ChatGPT, GitHub Copilot, Claude etc) to speed up the work on the code, though watch every single byte of the diff like it's been written by a party you shouldn't trust.
+
+# Code Review
+
+At Reef we do code review for almost all pull requests.
+We treat this like friendly help, with the reviewer offering suggestions on how to improve the given code.
+It is intuitive to most people, but not for everyone. [This document](docs/Code_Review.md) explains in detail how we approach reviews and why.
 
 # Time-tracking
 
@@ -253,29 +270,6 @@ What I mean is that while some people can output 35 hours per week of focused wo
 In the end, it doesn't matter much - if you get paid by the hour, you do a certain amount of those hours in a year, and then it's either divided equally into 12 installments or proportionally to the amount of work done in a given billing cycle.
 Assuming you earn at least slightly more than you spend and that you have some kind of a financial buffer, at the end of the year, you'll end up with the same amount.
 In 2022Q2 we tried to open a position for a "full-time" engagement with a fixed monthly payment model (which would automatically bonus people who perform well to make it fair, sort of like a liquidity pool)... But nobody was really interested, so we took the job ad down.
-
-### So that we put ourselves in the right mindset
-
-Let me tell you a story.
-
-One of our staff members worked from a room on the top floor of his 3 story house.
-A few times per day he wanted to get some tea 🍵, but the kitchen was downstairs, so he stopped the time tracker, walked down the squeaky wooden stairs, got to the kitchen, filled up the kettle, prepared a cup and a teabag while waiting for the kettle to boil the water, poured the hot water into the cup and waited for a few minutes for the tea to brew.
-He then removed the teabag from the cup and slowly walked up 3 flights of stairs.
-Started the timer and got back to work (well, sort of - that entire activity distracted him, so he needed to reload the task which he was working on to his short-term memory before he could do actual development).
-
-Later that day he has taken a look at his time log and realized he spent 15min on a tea break.
-It was not a very relaxing type of activity (trying not to burn himself with a hot liquid while going up ~~stairs~~ squeaky wooden stairs was not his favourite hobby) (actually, his hobby was board games, but I digress).
-
-Now, what's the moral of that story?
-Later that day he bought a kettle and installed it in his room.
-We could see it on video calls - he could reach behind his chair and start the kettle without losing focus.
-Tea and cup were also there.
-That's like 30-45min extra more time *per day* spent on building something he loves to build.
-Python backends. This is why we are here.
-This is why you are here, am I right?
-Seriously, if you could choose between RT and a workplace optimized for "walking up squeaky wooden stairs while trying to not burn yourself with a hot liquid", what would you do?
-
-(or maybe it was ☕? I don't remember)
 
 ### So that we know how much we should charge the client
 
@@ -391,6 +385,13 @@ To improve the security of our accounts, we require you to enable 2-step verific
 Create a new account on GitHub.
 The suggested username is the same as one used in your reef email (replace dots with hyphens) with added -reef suffix, eg.
 `jan-kowalski-reef` or `adam-smith-reef`.
+
+Handles must be clearly identifiable — at minimum, your last name must be present.
+This makes it easy to scan the org members list and confirm no unnecessary accounts are present.
+External collaborators with non-identifiable handles are allowed, 
+but they must be listed on our [internal Notion](https://www.notion.so/GitHub-27fb63b4ef1e804095a9c8caaddff673?source=copy_link#27fb63b4ef1e8053aa13e77b7e1dd604)
+page for the same reason.
+
 
 2-step authorization should be enabled as well.
 If you don't enable it (or if you disable it - which is crazy, but technically possible), a periodic audit will catch you and you will make the auditor very sad 😭.

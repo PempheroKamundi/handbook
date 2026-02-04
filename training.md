@@ -27,7 +27,7 @@ The rest of the sections are meant for after-evaluation staff.
 - <https://asana.com/pl/resources/impostor-syndrome> - Turn impostor syndrome into confidence:
   15 tips for managers and individuals (11 min read);
 
-- <https://hbr.org/1999/11/management-time-whos-got-the-monkey> - "Management Time:
+- <https://www.med.unc.edu/uncaims/wp-content/uploads/sites/764/2014/03/Oncken-_-Wass-Who_s-Got-the-Monkey.pdf> - "Management Time:
   Who’s Got the Monkey?"
   by William Oncken, Jr.Donald L. Wass (1974) (11 min read);
 
@@ -102,6 +102,7 @@ If it does, watch it all.
 - <https://blog.ploeh.dk/2020/10/05/fortunately-i-dont-squash-my-commits/> - good reason to not squash commits
 - <https://www.divio.com/blog/documentation/> - basic knowledge of software documentation structure
 - <https://bessey.dev/blog/2024/05/24/why-im-over-graphql/> - why not graphql
+- [Correct parameters values for AWS RDS Postgres databases](docs/aws_rds_params.md)
 - <https://blog.gitbutler.com/how-git-core-devs-configure-git/> - showcase of common git options 
 
 #### all junior developers
